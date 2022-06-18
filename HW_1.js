@@ -1,15 +1,37 @@
-const prompt = require('prompt-sync')();
 
-let firstNumber = +prompt("Enter your first number ");
+function FirstScript() {
 
-let secondNumber = +prompt("Enter your second number ");
+    let firstNumber = +prompt("Enter your first number ");
 
+    let secondNumber = +prompt("Enter your second number ");
 
-if (Number.isInteger(firstNumber) && Number.isInteger(secondNumber)) {
+    if (Number.isInteger(firstNumber) && Number.isInteger(secondNumber)) {
 
-    console.log(firstNumber.toString(secondNumber)); // Первое Задание 
-    console.log(firstNumber + secondNumber, firstNumber / secondNumber) // Второе Задание 
+        alert(firstNumber.toString(secondNumber));
 
-} else {
-    console.log("Некорректный ввод!!!");
+    } else {
+        alert("Некорректный ввод!!!");
+
+    }
+}
+
+function SecondScript() {
+
+    let thirdNumber = +prompt("Enter your first number ");
+
+    if (Number.isInteger(thirdNumber)) {
+
+        let fourthNumber = +prompt("Enter your second number ");
+
+        if (Number.isInteger(fourthNumber)) {
+
+            alert(thirdNumber + fourthNumber + ' ' + "and" + ' ' + thirdNumber / fourthNumber);
+
+        } else {
+            alert("Некорректный ввод!!!");
+
+        }
+    } else {
+        alert("Некорректный ввод!!!");
+    }
 }

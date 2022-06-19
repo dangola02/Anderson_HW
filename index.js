@@ -1,4 +1,4 @@
-/// FIRST TASK
+// / FIRST TASK
 
 function makeObjectDeepCopy(anyObj) {
     let newObj = {};
@@ -16,7 +16,7 @@ function makeObjectDeepCopy(anyObj) {
 
 };
 
-/// SECOND TASK
+// / SECOND TASK
 
 function selectFromInterval(array, firstInterval, secondInterval) {
 
@@ -83,7 +83,7 @@ myIterable[Symbol.iterator] = function () {
         throw Error("ERROR TO < FROM");
     }
 
-    if ('from' in myIterable !== true || to in myIterable !== true) {
+    if ('from' in myIterable !== true || 'to' in myIterable !== true) {
 
         throw Error("Can't Find from or to");
 
@@ -94,20 +94,18 @@ myIterable[Symbol.iterator] = function () {
         throw Error("FROM OR TO IS NOT A NUMBER");
     }
 
-    if (this.to)
+    return {
+        current: this.from,
+        last: this.to,
 
+        next() {
 
-        return {
-            current: this.from,
-            last: this.to,
-
-            next() {
-
-                if (this.current <= this.last) {
-                    return { done: false, value: this.current++ };
-                } else {
-                    return { done: true };
-                }
+            if (this.current <= this.last) {
+                return { done: false, value: this.current++ };
+            } else {
+                return { done: true };
             }
-        };
+        }
+    };
 };
+

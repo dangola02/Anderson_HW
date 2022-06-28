@@ -106,6 +106,3 @@ class Calculator {
 
 }
 
-const calculator = new Calculator(0, 5);
-
-calculator.logDiv();

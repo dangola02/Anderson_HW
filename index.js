@@ -63,7 +63,7 @@ class Calculator {
 
         this.a = num;
 
-        return this;
+     
 
     }
 
@@ -72,21 +72,21 @@ class Calculator {
 
         this.b = num;
 
-        return this;
+        
 
     }
 
     logSum = () => {
         console.log(this.a + this.b);
 
-        return this;
+        
 
     }
 
     logMul = () => {
         console.log(this.a * this.b);
 
-        return this;
+        
     }
 
     logSub = () => {
@@ -101,7 +101,7 @@ class Calculator {
         }
         console.log(this.a / this.b);
 
-        return this;
+         
     }
 
 }

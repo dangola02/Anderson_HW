@@ -54,7 +54,6 @@ class Calculator {
 
         this.a = a;
         this.b = b;
-
     }
 
 
@@ -62,36 +61,24 @@ class Calculator {
         Calculator.checkNum(num);
 
         this.a = num;
-
-     
-
     }
 
     setY(num) {
         Calculator.checkNum(num);
 
         this.b = num;
-
-        
-
     }
 
     logSum = () => {
         console.log(this.a + this.b);
-
-        
-
     }
 
     logMul = () => {
         console.log(this.a * this.b);
-
-        
     }
 
     logSub = () => {
         console.log(this.a - this.b);
-
     }
 
     logDiv = () => {
@@ -100,8 +87,6 @@ class Calculator {
 
         }
         console.log(this.a / this.b);
-
-         
     }
 
 }

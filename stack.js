@@ -1,7 +1,8 @@
 class Stack {
 
     constructor(maxSize = 10) {
-        if (typeof (maxSize) !== typeof (6) || maxSize === Infinity || maxSize === -Infinity || maxSize === 0) {
+        if (typeof (maxSize) !== typeof (6) || maxSize === Infinity ||
+            maxSize === -Infinity || maxSize === 0 || isNaN(maxSize) === isNaN(NaN)) {
 
             throw new Error("Your stack size is invalid");
         }
@@ -45,7 +46,7 @@ class Stack {
             return null;
         }
 
-        return this.storageofItems[this.size - (this.size - 1)];
+        return this.storageofItems[this.size];
 
     }
 
@@ -73,22 +74,7 @@ class Stack {
             throw new Error("Your Entity is not iterable")
         }
 
-        if (iterable instanceof Map || iterable instanceof Set) {
-
-            let iterable2 = iterable.values();
-
-            for (let i of iterable2) {
-
-                stackfromIterable.push(iterable2[i]);
-                stackfromIterable.maxSize++
-            }
-
-            stackfromIterable.maxSize = stackfromIterable.size;
-
-            return stackfromIterable;
-        }
-
-        for (let i of iterable) {
+        for (let i in iterable) {
 
             stackfromIterable.push(iterable[i]);
             stackfromIterable.maxSize++
@@ -99,5 +85,6 @@ class Stack {
         return stackfromIterable;
     }
 }
+
 
 module.exports = { Stack };
